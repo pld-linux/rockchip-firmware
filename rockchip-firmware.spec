@@ -1,13 +1,13 @@
-%define		gitref		74213af1e952c4683d2e35952507133b61394862
+%define		gitref		3e288fe814e059dd06833495f845cab04ac20a5c
 
 Summary:	Firmware for Rockchip devices
 Name:		rockchip-firmware
-Version:	20250613
+Version:	20260626
 Release:	1
 License:	Redistributable
 Group:		Base/Kernel
 Source0:	https://github.com/rockchip-linux/rkbin/archive/%{gitref}/rkbin-%{version}.tar.gz
-# Source0-md5:	8ca527c652fb5ada44839315e297f74a
+# Source0-md5:	55f7fd3c1198d4eccbf68f235b866f80
 URL:		https://github.com/rockchip-linux/rkbin
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,6 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE README doc/release/*_EN.md
-%lang(zh_CN) %doc doc/release/*_CN.md
+%doc LICENSE README.md doc/release/*_EN.md
+%lang(zh_CN) %doc README.zh.md doc/release/*_CN.md
 %{_datadir}/rockchip-firmware
